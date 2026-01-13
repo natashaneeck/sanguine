@@ -1,5 +1,8 @@
 # Sanguine
 
+Project for CS3100 Project Design and Implementation 2 (Formerly called Object-Oriented Design)  
+Private academic code, available upon request for a limited time period due to instructor policies  
+
 ## **Overview**
 
 This codebase implements Sanguine, a 2-player card game played on a rectangular board. Players place cards with unique
