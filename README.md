@@ -15,6 +15,29 @@ Written in Java, tested with JUnit, visuals built using Swing library.
 ### Controls
 Keys for passing and confirming:  
 Press enter to confirm move, and p to pass.  
+The game ends when the entire board is full of cards, and the score is tallied based on their value and whether that player won that row.  
+
+## Screenshots
+<table>
+  <tr>
+    <td align="center">
+      <img width="1175" height="890" alt="Red start" src="https://github.com/user-attachments/assets/971285e8-f0d5-4fc0-9ffa-05d2df76c5c6" />
+    </td>
+    <td align="center">
+      <img width="1171" height="890" alt="Blue start" src="https://github.com/user-attachments/assets/a63a33d0-9e28-4cd1-b169-2ea98bde0b51" />
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <img width="1172" height="889" alt="In Progress" src="https://github.com/user-attachments/assets/ef55014c-85c2-43e3-8876-5f0c811bb6f3" />
+    </td>
+    <td align="center">
+      <img width="1176" height="881" alt="End Screen" src="https://github.com/user-attachments/assets/4a473e02-0ad6-4ec0-8425-781a250e428e" />
+    </td>
+  </tr>
+</table>
+<img width="492" height="180" alt="Error Dialogue" src="https://github.com/user-attachments/assets/6dbb8fab-7b3b-4a74-af37-aaef79dba1c3" />
+
 
 ## **Quick Start**
 Example jar command:  
