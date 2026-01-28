@@ -2,6 +2,7 @@
 
 Project for CS3100 Project Design and Implementation 2 (Formerly called Object-Oriented Design)  
 Developed with a pair-programming approach  
+Provided by assignment: gradle and checkstyle files  
 
 ## **Overview**
 
