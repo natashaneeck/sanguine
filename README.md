@@ -1,7 +1,7 @@
 # Sanguine
 
 Project for CS3100 Project Design and Implementation 2 (Formerly called Object-Oriented Design)  
-Private academic code, available upon request for a limited time period due to instructor policies  
+Developed with a pair-programming approach  
 
 ## **Overview**
 
@@ -35,28 +35,27 @@ The game ends when the entire board is full of cards, and the score is tallied b
       <img width="1176" height="881" alt="End Screen" src="https://github.com/user-attachments/assets/4a473e02-0ad6-4ec0-8425-781a250e428e" />
     </td>
   </tr>
+  <tr>
+    <td align="center">
+      <img width="492" height="180" alt="Error Dialogue" src="https://github.com/user-attachments/assets/6dbb8fab-7b3b-4a74-af37-aaef79dba1c3" />
+    </td>
+  </tr>
 </table>
-<img width="492" height="180" alt="Error Dialogue" src="https://github.com/user-attachments/assets/6dbb8fab-7b3b-4a74-af37-aaef79dba1c3" />
 
 
 ## **Quick Start**
-Example jar command:  
-java -jar sanguinePlayFile.jar 3 5 docs/exampleBig.deck docs/exampleBig.deck human fill-first  
+Jar command syntax:  
+`java -jar sanguinePlayFile.jar <columns> <rows> docs/exampleBig.deck docs/exampleBig.deck <player1> <player2>`  
+
+Options for players include:
+- human (manual control)
+- fill-first (automatic player)
+- max-score (automatic player)
+
+Jar command example:  
+`java -jar sanguinePlayFile.jar 3 5 docs/exampleBig.deck docs/exampleBig.deck human fill-first`  
 
 Example code for main methods:  
-
-        //For TextualView:
-        // initialize model with 3x5 board 
-        List<Card> exampleBigDeck = new ConfigFileParser().parseDeck("docs"
-            + File.separator + "exampleBig.deck");
-        MutableModelInterface model  = new SanguineModel(3, 5, exampleBigDeck, exampleBigDeck, 5, false);
-        // play cards 
-        this.inProgressModel.playCard(this.inProgressModel.getHand(Player.RED).get(4), 2, 0);
-        this.inProgressModel.playCard(this.inProgressModel.getHand(Player.BLUE).get(1), 0, 4);
-        this.inProgressModel.playCard(this.inProgressModel.getHand(Player.RED).get(2), 0, 0);
-        // get the visual rendering
-        TextualView view = new SanguineTextualView(model);
-        System.out.println(view.toString());
 
         //For GUI window:
         List<Card> exampleBigDeck = new ConfigFileParser().parseDeck("docs"
@@ -72,6 +71,19 @@ Example code for main methods:
         view.repaint();
         model.playCard(model.getHand(Player.BLUE).getFirst(), 1, 6);
         view.repaint();
+
+        //For TextualView:
+        // initialize model with 3x5 board 
+        List<Card> exampleBigDeck = new ConfigFileParser().parseDeck("docs"
+            + File.separator + "exampleBig.deck");
+        MutableModelInterface model  = new SanguineModel(3, 5, exampleBigDeck, exampleBigDeck, 5, false);
+        // play cards 
+        this.inProgressModel.playCard(this.inProgressModel.getHand(Player.RED).get(4), 2, 0);
+        this.inProgressModel.playCard(this.inProgressModel.getHand(Player.BLUE).get(1), 0, 4);
+        this.inProgressModel.playCard(this.inProgressModel.getHand(Player.RED).get(2), 0, 0);
+        // get the visual rendering
+        TextualView view = new SanguineTextualView(model);
+        System.out.println(view.toString());
 
 ## **Key Components**
 1. Model: The class SanguineModel is an implementation of the MutableModelInterface with orchestrates all game logic 
